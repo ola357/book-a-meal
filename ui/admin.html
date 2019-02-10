@@ -19,7 +19,64 @@
             <a id="login" href="#contact">Login</a>
         </div>
     </div>
-   
+    <div id="main">
+        <section class="btn-group">
+            <button>Create/Add Meal</button>
+            <button>Set Menu</button>
+            <button>Day Orders</button>
+        </section>
+        <article>
+            <!-- create a meal form -->
+            <div class="form-container">
+                <form action="">
+                    <div class="meal-picture">
+                        <label for="mealpicture">Picture for Meal</label>
+                        <img src="" alt="meal's pic">
+                        <input type="file" name="mealpicture" id="mealpicture">
+                    </div>
+                    <div class="meal-detail">
+                        <label for="mealname">Meal's Name</label>
+                        <input type="text" name="mealname" id="mealname">
+                        <label for="mealprice">Meal's Price</label>
+                        <input type="text" name="mealprice" id="mealprice">
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Create/Add">
+                        <input type="button" value="Cancel">
+                    </div>
+                </form>
+            </div>
+            <!-- end meal creating form -->
+            <!-- Setting menu for the day -->
+            <div class="menu">
+                <form action="">
+                    <h1>Custom Checkboxes</h1>
+                    <label class="container"> Meal One
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Meal Two
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Meal Three
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Meal Four
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div>
+                        <input type="submit" value="Set">
+                    </div>
+                </form>
+            </div>
+
+        </article>
+    </div>
+
     <!-- footer -->
     <div class="footer">
         <p>Copyright@ALCForLoop</p>
