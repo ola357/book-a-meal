@@ -15,23 +15,24 @@
     <div class="header">
         <a href="#default" class="logo">book-a-meal</a>
         <div class="header-right">
-            <a id="signup" class="active" href="#home">Signup</a>
-            <a id="login" href="#contact">Login</a>
+            <a id="signup" class="active" href="#home">LogOut</a>
+            <!-- <a id="login" href="#contact">Login</a> -->
         </div>
     </div>
     <div id="main">
         <section class="btn-group">
-            <button>Create/Add Meal</button>
+            <button>Create Meal</button>
             <button>Set Menu</button>
-            <button>Day Orders</button>
+            <button>Orders History</button>
         </section>
         <article>
             <!-- create a meal form -->
             <div class="form-container">
                 <form action="">
+                    <h3>Create a new Meal</h3>
                     <div class="meal-picture">
                         <label for="mealpicture">Picture for Meal</label>
-                        <img src="" alt="meal's pic">
+                        <img src="/ui/images/menu/defaultmealpic.png" alt="meal's pic">
                         <input type="file" name="mealpicture" id="mealpicture">
                     </div>
                     <div class="meal-detail">
@@ -42,16 +43,16 @@
                     </div>
 
                     <div>
-                        <input type="submit" value="Create/Add">
+                        <input type="submit" value="Create">
                         <input type="button" value="Cancel">
                     </div>
                 </form>
             </div>
-            <!-- end meal creating form -->
-            <!-- Setting menu for the day -->
-            <div class="menu">
+
+            <!-- Set Menu for the day -->
+            <div class="set-menu">
                 <form action="">
-                    <h1>Custom Checkboxes</h1>
+                    <h1>Set Menu for the day</h1>
                     <label class="container"> Meal One
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
@@ -72,6 +73,66 @@
                         <input type="submit" value="Set">
                     </div>
                 </form>
+            </div>
+            <!-- editing and deleting meals -->
+            <div class="menu-list">
+                <div>
+                    <img class="pic" src="/ui/images/menu/jollof-rice-3.jpg" alt="">
+                    <span>Jollof with Beef</span>
+                    <span>1000</span>
+                    <span><button>Edit</button></span>
+                    <span><button>Delete</button></span>
+
+                </div>
+                <hr>
+                <div>
+                    <img class="pic" src="/ui/images/menu/fried-rice.jpg" alt="">
+                    <span>Fried rice with Beef</span>
+                    <span>1000</span>
+                    <span><button>Edit</button></span>
+                    <span><button>Delete</button></span>
+
+                </div>
+            </div>
+            <!-- History of orders -->
+            <div class="order-history">
+                <div>
+                    <form action="">
+                        <h3>Select History</h3>
+                        <select name="Time">
+                            <option value="volvo">Today</option>
+                            <option value="saab">Week</option>
+                            <option value="fiat">Month</option>
+                            <option value="audi">All Orders</option>
+                        </select>
+                        <br><br>
+                        <input type="submit">
+                    </form>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Price</th>
+                            <th>Quantity sold</th>
+                        </tr>
+                        <tr>
+                            <td>Fried Rice</td>
+                            <td>1000</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Jollof Rice</td>
+                            <td>1000</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Semo with Egusi</td>
+                            <td>1000</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
         </article>

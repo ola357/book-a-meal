@@ -1,3 +1,7 @@
+hr{
+  border: 2px solid grey;
+  margin: 4px;
+}
 #main {
     display: flex;
     flex-direction: column;
@@ -24,7 +28,7 @@
     justify-content: center;
     flex-direction: column;
   }
-  /* ****** */
+  /* sidebar buttons****** */
   .btn-group button{
       display: block;
       width: 100%;
@@ -33,7 +37,7 @@
   .form-container{
       width: 60%;
       /* background-color: aquamarine; */
-      display: none;
+      /* display: none; */
   }
   form{
       display: flex;
@@ -49,6 +53,10 @@
     display: flex;
     flex-direction: column;
   }
+  .meal-picture img{
+    height: 200px;
+    width: 200px;
+  }
 .meal-detail{
     display: flex;
     flex-direction: column;
@@ -58,8 +66,10 @@ input, label{
 }
 
 /* ****** setting menu for the day */
-.menu{
-    display: none;
+.set-menu{
+    /* display: none; */
+    margin: 16px;
+    width: 60%;
 }
  /* Customize the label (the container) */
  .container {
@@ -73,6 +83,7 @@ input, label{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
   }
   
   /* Hide the browser's default checkbox */
@@ -128,3 +139,37 @@ input, label{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   } 
+  /* *****style for menu list */
+  .menu-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 60%;
+    margin: 0px 16px 16px 16px;
+  }
+  .pic{
+    max-width: 100px;
+    max-height: 100px;
+  }
+  /* history of orders */
+  .order-history{
+    background-color: #eee;
+    width: 60%;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
