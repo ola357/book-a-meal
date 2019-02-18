@@ -1,7 +1,7 @@
-const express = require('express');
-const { validateGenre } = require("../middleware/validateGenre");
+import { Router } from 'express';
+import { validateGenre } from "../middleware/validateGenre";
 
-const router = express.Router();
+const router = Router();
 
 const menu = [
   { id: 1, name: 'Jollof rice' },
@@ -25,4 +25,4 @@ router.post('/', (req, res) => {
   res.send(meal);
 });
 
-module.exports = router;
+export default router;

@@ -1,12 +1,12 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+import { should as _should, use, request } from 'chai';
+import chaiHttp from 'chai-http';
 
 let server;
 
 // eslint-disable-next-line no-unused-vars
-const should = chai.should();
+const should = _should();
 
-chai.use(chaiHttp);
+use(chaiHttp);
 // Our parent block
 describe('/api/v1/orders', () => {
   beforeEach((done) => { // Before each test we empty the database
@@ -23,7 +23,7 @@ describe('/api/v1/orders', () => {
   */
   describe('/GET orders', () => {
     it('it should GET all orders', (done) => {
-      chai.request(server)
+      request(server)
         .get('/api/v1/orders')
         .end((err, res) => {
           res.should.have.status(200);
@@ -38,7 +38,7 @@ describe('/api/v1/orders', () => {
         name: "Beans",
 
       };
-      chai.request(server)
+      request(server)
         .post('/api/v1/orders')
         .send(order)
         .end((err, res) => {
@@ -50,7 +50,7 @@ describe('/api/v1/orders', () => {
       const order = {
         name: "T",
       };
-      chai.request(server)
+      request(server)
         .post('/api/v1/orders')
         .send(order)
         .end((err, res) => {
@@ -61,7 +61,7 @@ describe('/api/v1/orders', () => {
   });
   describe('PUT/:order-id/name', () => {
     it('it should throw an error', (done) => {
-      chai.request(server)
+      request(server)
         .put('/api/v1/orders/10')
         .end((err, res) => {
           res.should.have.status(404);
@@ -69,7 +69,7 @@ describe('/api/v1/orders', () => {
         });
     });
     it('it should throw an error', (done) => {
-      chai.request(server)
+      request(server)
         .put('/api/v1/orders/2')
         .send({
           name: "m",
@@ -80,7 +80,7 @@ describe('/api/v1/orders', () => {
         });
     });
     it('it should PUT succesfully', (done) => {
-      chai.request(server)
+      request(server)
         .put('/api/v1/orders/1')
         .send({
           name: "doughnuts",

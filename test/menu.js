@@ -1,12 +1,12 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+import { should as _should, use, request } from 'chai';
+import chaiHttp from 'chai-http';
 
 let server;
 
 // eslint-disable-next-line no-unused-vars
-const should = chai.should();
+const should = _should();
 
-chai.use(chaiHttp);
+use(chaiHttp);
 // Our parent block
 describe('/api/v1/menu', () => {
   beforeEach((done) => { // Before each test we empty the database
@@ -23,7 +23,7 @@ describe('/api/v1/menu', () => {
   */
   describe('/GET menu', () => {
     it('it should GET all menu', (done) => {
-      chai.request(server)
+      request(server)
         .get('/api/v1/menu')
         .end((err, res) => {
           res.should.have.status(200);
@@ -38,7 +38,7 @@ describe('/api/v1/menu', () => {
         name: "Beans",
 
       };
-      chai.request(server)
+      request(server)
         .post('/api/v1/menu')
         .send(meal)
         .end((err, res) => {
@@ -50,7 +50,7 @@ describe('/api/v1/menu', () => {
       const meal = {
         name: "T",
       };
-      chai.request(server)
+      request(server)
         .post('/api/v1/menu')
         .send(meal)
         .end((err, res) => {

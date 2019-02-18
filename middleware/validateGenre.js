@@ -1,9 +1,12 @@
-const Joi = require('joi');
+import { string, validate } from 'joi';
 
 function validateGenre(genre) {
   const schema = {
-    name: Joi.string().min(3).required(),
+    name: string().min(3).required(),
   };
-  return Joi.validate(genre, schema);
+  return validate(genre, schema);
 }
-exports.validateGenre = validateGenre;
+// eslint-disable-next-line no-underscore-dangle
+const _validateGenre = validateGenre;
+// eslint-disable-next-line import/prefer-default-export
+export { _validateGenre as validateGenre };
