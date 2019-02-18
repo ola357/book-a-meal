@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import express from 'express';
 import { validateGenre } from "../middleware/validateGenre";
 
-const router = Router();
+const router = express.Router();
 
 const meals = [
   { id: 1, name: 'Jollof rice' },

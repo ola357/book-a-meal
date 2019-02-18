@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc mocha --require babel-register",
     "build": "babel app.js -d dist",
-    "start": "node dist/app.js --exec babel-node",
+    "start": "nodemon dist/app.js --exec babel-node",
     "serve": "node dist/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
