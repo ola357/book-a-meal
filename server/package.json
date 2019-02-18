@@ -7,7 +7,8 @@
     "test": "nyc mocha --require babel-register",
     "build": "babel app.js -d dist",
     "start": "nodemon dist/app.js --exec babel-node",
-    "serve": "node dist/app.js"
+    "serve": "node dist/app.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
