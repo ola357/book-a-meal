@@ -3,11 +3,12 @@
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
 }
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   padding: 20px 10px;
 }
 
@@ -44,6 +45,7 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+ 
   .header a {
     float: none;
     display: block;
@@ -54,9 +56,16 @@ body {
     float: none;
   }
 }
+
+  @media screen and (min-width: 600px) {
+.header{
+  width: 80%;
+  margin: auto;
+}
+  }
 /* banner */
 .banner{
-    background-image: url("/ui/images/annie-spratt-464751-unsplash.jpg");
+    background-image: url("/images/annie-spratt-464751-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
