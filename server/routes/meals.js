@@ -46,10 +46,10 @@ router.delete('/:id', (req, res) => {
   res.send(meal);
 });
 
-router.get('/:id', (req, res) => {
+/* router.get('/:id', (req, res) => {
   const meal = meals.find(c => c.id === parseInt(req.params.id, 10));
   if (!meal) return res.status(404).send('The meal with the given ID was not found.');
   res.send(meal);
-});
+}); */
 
 module.exports = router;
