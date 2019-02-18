@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc mocha --require babel-register",
+    "build": "babel app.js -d dist",
+    "start": "nodemon dist/app.js --exec babel-node",
+    "serve": "node dist/app.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "engines": {
+    "node":"10.15.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "express": "^4.16.4",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0"
+  }
+}
