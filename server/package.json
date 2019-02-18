@@ -10,6 +10,9 @@
     "serve": "node dist/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
+  "engines": {
+    "node":"10.15.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
